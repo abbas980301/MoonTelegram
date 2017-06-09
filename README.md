@@ -6,7 +6,8 @@ Installation
 ---------
 From your project directory, run
 ```
-composer require shakibonline/moon-telegram```
+composer require shakibonline/moon-telegram
+```
 
 Examples
 ---------
