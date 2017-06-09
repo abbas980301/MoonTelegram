@@ -15,6 +15,16 @@ composer require shakibonline/moon-telegram
 
 Examples
 ---------
+```php
+require_once '../vendor/autoload.php';
+
+$message = new \Shakibonline\Message($update);
+
+echo $message->Text() . PHP_EOL;
+echo $message->Chat()->ID() . PHP_EOL;
+echo $message->Chat()->Type() . PHP_EOL;
+```
+
 See `tests` folder
 
 Contact me
