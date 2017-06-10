@@ -3,8 +3,7 @@
 [![Total Downloads](https://poser.pugx.org/shakibonline/moon-telegram/downloads)](https://packagist.org/packages/shakibonline/moon-telegram)
 [![License](https://poser.pugx.org/shakibonline/moon-telegram/license)](https://packagist.org/packages/shakibonline/moon-telegram)
 
-
-A very simple helper for handling telegram updates type.
+> It's a way to use the telegram's response as Object instead of Array
 
 Installation
 ---------
