@@ -151,17 +151,52 @@ class Message extends Types
         return new Document($this->message['audio']);
     }
 
-    public function Caption()
-    {
-        return $this->message['caption'];
-    }
-
-
     public function Photo()
     {
         // Todo handle other photos
         return new PhotoSize($this->message['photo'][0]);
     }
 
+    public function Sticker()
+    {
+        return new Sticker($this->message['sticker']);
+    }
+
+
+    public function Video()
+    {
+        return new Video($this->message['video']);
+    }
+
+
+    public function Voice()
+    {
+        return new Voice($this->message['voice']);
+    }
+
+
+    public function VideoNote()
+    {
+        return new VideoNote($this->message['voice']);
+    }
+
+
+    public function NewChatMembers()
+    {
+        return json_decode($this->message['new_chat_members']);
+    }
+
+
+
+    public function Caption()
+    {
+        return $this->message['caption'];
+    }
+
+
+    public function Contact()
+    {
+        return new Contact($this->message['voice']);
+    }
 
 }
