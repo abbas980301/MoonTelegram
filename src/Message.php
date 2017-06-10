@@ -52,6 +52,18 @@ class Message extends Types
     }
 
     /**
+     * Set Message
+     *
+     * this method use in replay mode.
+     *
+     * @param array $message
+     */
+    protected function setMessage($message)
+    {
+        $this->message = $message;
+    }
+
+    /**
      * Print message due type
      */
     public function printMessage()
@@ -60,7 +72,7 @@ class Message extends Types
             $this->message
             //$this->update[$this->type]
             ,
-            JSON_PRETTY_PRINT
+            128|256
         );
     }
 
@@ -110,7 +122,9 @@ class Message extends Types
 
     public function ReplyToMessage()
     {
-        return new Message($this->message['reply_to_message']);
+        $reply = new Message($this->message['reply_to_message']);
+        $reply->setMessage($this->message['reply_to_message']);
+        return $reply;
     }
 
 
