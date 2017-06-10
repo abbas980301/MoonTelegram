@@ -25,7 +25,7 @@ echo $message->Chat()->ID() . PHP_EOL;
 echo $message->Chat()->Type() . PHP_EOL;
 ```
 
-See `tests` folder
+See `Examples` folder
 
 Contact me
 ------------
