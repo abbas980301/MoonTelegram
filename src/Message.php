@@ -68,12 +68,7 @@ class Message extends Types
      */
     public function printMessage()
     {
-        echo json_encode(
-            $this->message
-            //$this->update[$this->type]
-            ,
-            128|256
-        );
+        echo json_encode($this->message,128|256);
     }
 
     /**
