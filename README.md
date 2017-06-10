@@ -25,7 +25,7 @@ echo $message->Chat()->ID() . PHP_EOL;
 echo $message->Chat()->Type() . PHP_EOL;
 ```
 
-See `Examples` folder
+See [`Examples`](https://github.com/shakibonline/MoonTelegram/tree/master/Examples) folder
 
 Contact me
 ------------
