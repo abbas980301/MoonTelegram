@@ -2,6 +2,7 @@
 
 [![Total Downloads](https://poser.pugx.org/shakibonline/moon-telegram/downloads)](https://packagist.org/packages/shakibonline/moon-telegram)
 [![License](https://poser.pugx.org/shakibonline/moon-telegram/license)](https://packagist.org/packages/shakibonline/moon-telegram)
+[![StyleCI](https://styleci.io/repos/93853503/shield?branch=master)](https://styleci.io/repos/93853503)
 
 > It's a way to use the telegram's response as Object instead of Array
 
