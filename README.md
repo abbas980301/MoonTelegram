@@ -25,6 +25,17 @@ echo $message->Chat()->ID() . PHP_EOL;
 echo $message->Chat()->Type() . PHP_EOL;
 ```
 
+Check The type
+```php
+if ( $type === MoonTelegram::MESSAGE ) {
+	$message = new Message($this->telegram->getData());
+	$chatInfo = $message->Chat();
+} elseif ( $type === MoonTelegram::CALLBACK_QUERY ) {
+	$callback = new CallbackQuery($this->telegram->getData());
+	$chatInfo = $callback->Message()->Chat();
+}
+```
+
 See [`Examples`](https://github.com/shakibonline/MoonTelegram/tree/master/Examples) folder
 
 Contact me
