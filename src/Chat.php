@@ -4,7 +4,6 @@ namespace Shakibonline;
 
 class Chat
 {
-
     private $id;
     private $type;
     private $title;
@@ -15,6 +14,7 @@ class Chat
 
     /**
      * User constructor.
+     *
      * @param array $chat
      */
     public function __construct($chat)

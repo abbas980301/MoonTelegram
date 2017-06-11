@@ -4,7 +4,6 @@ namespace Shakibonline;
 
 class Sticker
 {
-
     private $file_id;
     private $width;
     private $height;
@@ -14,6 +13,7 @@ class Sticker
 
     /**
      * User constructor.
+     *
      * @param array $sticker
      */
     public function __construct($sticker)

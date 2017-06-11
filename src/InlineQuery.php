@@ -5,41 +5,45 @@ namespace Shakibonline;
 class InlineQuery extends Types
 {
     /**
-     * Store Update type
+     * Store Update type.
      *
-     * @var string $type
+     * @var string
      */
     private $type;
     /**
-     * Update object
-     * @var array $update
+     * Update object.
+     *
+     * @var array
      */
     private $update;
     /**
-     * Message object
-     * @var array $message
+     * Message object.
+     *
+     * @var array
      */
     private $message;
 
     /**
      * Message constructor.
+     *
      * @param $update
      */
     public function __construct($update)
     {
-        if ( array_key_exists(self::INLINE_QUERY, $update) ) {
+        if (array_key_exists(self::INLINE_QUERY, $update)) {
             $type = 'inline_query';
-        }else {
-            return null;
+        } else {
+            return;
         }
         $this->type = $type;
         $this->update = $update;
         $this->message = $update[$type];
+
         return $type;
     }
 
     /**
-     * Return message type
+     * Return message type.
      *
      * @return bool
      */
@@ -49,7 +53,8 @@ class InlineQuery extends Types
     }
 
     /**
-     * Return message id
+     * Return message id.
+     *
      * @return mixed
      */
     public function ID()

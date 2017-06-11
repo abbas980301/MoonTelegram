@@ -4,7 +4,6 @@ namespace Shakibonline;
 
 class User
 {
-
     private $id;
     private $first_name;
     private $last_name;
@@ -13,6 +12,7 @@ class User
 
     /**
      * User constructor.
+     *
      * @param array $user
      */
     public function __construct($user)

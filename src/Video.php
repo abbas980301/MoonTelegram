@@ -4,7 +4,6 @@ namespace Shakibonline;
 
 class Video
 {
-
     private $file_id;
     private $width;
     private $height;
@@ -15,15 +14,16 @@ class Video
 
     /**
      * User constructor.
+     *
      * @param array $video
      */
     public function __construct($video)
     {
-        $this->width     = $video['width'];
-        $this->thumb     = $video['thumb'];
-        $this->height    = $video['height'];
-        $this->file_id   = $video['file_id'];
-        $this->duration  = $video['duration'];
+        $this->width = $video['width'];
+        $this->thumb = $video['thumb'];
+        $this->height = $video['height'];
+        $this->file_id = $video['file_id'];
+        $this->duration = $video['duration'];
         $this->mime_type = $video['mime_type'];
         $this->file_size = $video['file_size'];
     }
@@ -32,7 +32,6 @@ class Video
     {
         return $this->file_id;
     }
-
 
     public function Width()
     {

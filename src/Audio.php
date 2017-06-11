@@ -4,7 +4,6 @@ namespace Shakibonline;
 
 class Audio
 {
-
     private $file_id;
     private $duration;
     private $performer;
@@ -14,6 +13,7 @@ class Audio
 
     /**
      * User constructor.
+     *
      * @param array $audio
      */
     public function __construct($audio)

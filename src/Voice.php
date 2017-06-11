@@ -4,7 +4,6 @@ namespace Shakibonline;
 
 class Voice
 {
-
     private $file_id;
     private $duration;
     private $mime_type;
@@ -12,12 +11,13 @@ class Voice
 
     /**
      * User constructor.
+     *
      * @param array $video
      */
     public function __construct($video)
     {
-        $this->file_id   = $video['file_id'];
-        $this->duration  = $video['duration'];
+        $this->file_id = $video['file_id'];
+        $this->duration = $video['duration'];
         $this->mime_type = $video['mime_type'];
         $this->file_size = $video['file_size'];
     }
@@ -26,7 +26,6 @@ class Voice
     {
         return $this->file_id;
     }
-
 
     public function Duration()
     {

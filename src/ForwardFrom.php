@@ -4,7 +4,6 @@ namespace Shakibonline;
 
 class ForwardFrom
 {
-
     private $id;
     private $first_name;
     private $last_name;
@@ -13,6 +12,7 @@ class ForwardFrom
 
     /**
      * User constructor.
+     *
      * @param array $user
      */
     public function __construct($forward_from)

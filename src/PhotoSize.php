@@ -4,7 +4,6 @@ namespace Shakibonline;
 
 class PhotoSize
 {
-
     private $file_id;
     private $width;
     private $height;
@@ -12,6 +11,7 @@ class PhotoSize
 
     /**
      * User constructor.
+     *
      * @param array $thumb
      */
     public function __construct($thumb)
