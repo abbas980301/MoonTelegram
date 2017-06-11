@@ -4,7 +4,6 @@ namespace Shakibonline;
 
 class Document
 {
-
     private $file_id;
     private $thumb;
     private $file_name;
@@ -13,6 +12,7 @@ class Document
 
     /**
      * User constructor.
+     *
      * @param array $document
      */
     public function __construct($document)

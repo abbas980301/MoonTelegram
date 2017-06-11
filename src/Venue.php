@@ -4,7 +4,6 @@ namespace Shakibonline;
 
 class Venue
 {
-
     private $location;
     private $title;
     private $address;
@@ -12,6 +11,7 @@ class Venue
 
     /**
      * User constructor.
+     *
      * @param array $venue
      */
     public function __construct($venue)
@@ -19,7 +19,7 @@ class Venue
         $this->location = $venue['location'];
         $this->title = $venue['title'];
         $this->address = $venue['address'];
-        $this->foursquare_id  = $venue['foursquare_id'];
+        $this->foursquare_id = $venue['foursquare_id'];
     }
 
     public function Location()
@@ -27,12 +27,10 @@ class Venue
         return new Location($this->location);
     }
 
-
     public function Title()
     {
         return $this->title;
     }
-
 
     public function Address()
     {

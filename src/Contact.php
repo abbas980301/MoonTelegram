@@ -4,7 +4,6 @@ namespace Shakibonline;
 
 class Contact
 {
-
     private $phone_number;
     private $first_name;
     private $last_name;
@@ -12,12 +11,13 @@ class Contact
 
     /**
      * User constructor.
+     *
      * @param array $contact
      */
     public function __construct($contact)
     {
-        $this->phone_number   = $contact['phone_number'];
-        $this->first_name  = $contact['first_name'];
+        $this->phone_number = $contact['phone_number'];
+        $this->first_name = $contact['first_name'];
         $this->last_name = $contact['last_name'];
         $this->user_id = $contact['user_id'];
     }
@@ -26,7 +26,6 @@ class Contact
     {
         return $this->phone_number;
     }
-
 
     public function FirstName()
     {

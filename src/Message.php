@@ -5,44 +5,48 @@ namespace Shakibonline;
 class Message extends Types
 {
     /**
-     * Store Update type
+     * Store Update type.
      *
-     * @var string $type
+     * @var string
      */
     private $type;
     /**
-     * Update object
-     * @var array $update
+     * Update object.
+     *
+     * @var array
      */
     private $update;
     /**
-     * Message object
-     * @var array $message
+     * Message object.
+     *
+     * @var array
      */
     private $message;
 
     /**
      * Message constructor.
+     *
      * @param $update
      */
     public function __construct($update)
     {
         $type = 'message';
-        if ( array_key_exists(self::CHANNEL_POST, $update) ) {
+        if (array_key_exists(self::CHANNEL_POST, $update)) {
             $type = 'channel_post';
-        }elseif ( array_key_exists(self::EDITED_MESSAGE, $update) ) {
+        } elseif (array_key_exists(self::EDITED_MESSAGE, $update)) {
             $type = 'edited_message';
-        }elseif ( array_key_exists(self::EDITED_CHANNEL_POST, $update) ) {
+        } elseif (array_key_exists(self::EDITED_CHANNEL_POST, $update)) {
             $type = 'edited_channel_post';
         }
         $this->type = $type;
         $this->update = $update;
         $this->message = $update[$type];
+
         return $type;
     }
 
     /**
-     * Return message type
+     * Return message type.
      *
      * @return bool
      */
@@ -52,7 +56,7 @@ class Message extends Types
     }
 
     /**
-     * Set Message
+     * Set Message.
      *
      * this method use in replay mode.
      *
@@ -64,15 +68,16 @@ class Message extends Types
     }
 
     /**
-     * Print message due type
+     * Print message due type.
      */
     public function printMessage()
     {
-        echo json_encode($this->message,128|256);
+        echo json_encode($this->message, 128 | 256);
     }
 
     /**
-     * Return message id
+     * Return message id.
+     *
      * @return mixed
      */
     public function MessageID()
@@ -117,23 +122,21 @@ class Message extends Types
 
     public function ReplyToMessage()
     {
-        $reply = new Message($this->message['reply_to_message']);
+        $reply = new self($this->message['reply_to_message']);
         $reply->setMessage($this->message['reply_to_message']);
+
         return $reply;
     }
-
 
     public function EditDate()
     {
         return $this->message['edit_date'];
     }
 
-
     public function Text()
     {
         return $this->message['text'];
     }
-
 
     public function Entities()
     {
@@ -144,7 +147,6 @@ class Message extends Types
     {
         return new Audio($this->message['audio']);
     }
-
 
     public function Document()
     {
@@ -162,61 +164,50 @@ class Message extends Types
         return new Sticker($this->message['sticker']);
     }
 
-
     public function Video()
     {
         return new Video($this->message['video']);
     }
-
 
     public function Voice()
     {
         return new Voice($this->message['voice']);
     }
 
-
     public function VideoNote()
     {
         return new VideoNote($this->message['voice']);
     }
-
 
     public function NewChatMembers()
     {
         return json_decode($this->message['new_chat_members']);
     }
 
-
-
     public function Caption()
     {
         return $this->message['caption'];
     }
-
 
     public function Contact()
     {
         return new Contact($this->message['voice']);
     }
 
-
     public function Location()
     {
         return new Location($this->message['location']);
     }
-
 
     public function Venue()
     {
         return new Venue($this->message['venue']);
     }
 
-
     public function NewChatMember()
     {
         return new User($this->message['new_chat_member']);
     }
-
 
     public function LeftChatMember()
     {
@@ -236,26 +227,23 @@ class Message extends Types
 
     public function DeleteChatPhoto()
     {
-        return var_export($this->message['delete_chat_photo'] , true);
+        return var_export($this->message['delete_chat_photo'], true);
     }
 
     public function GroupChatCreated()
     {
-        return var_export($this->message['group_chat_created'] , true);
+        return var_export($this->message['group_chat_created'], true);
     }
-
 
     public function SupergroupChatCreated()
     {
-        return var_export($this->message['supergroup_chat_created'] , true);
+        return var_export($this->message['supergroup_chat_created'], true);
     }
-
 
     public function ChannelChatCreated()
     {
-        return var_export($this->message['channel_chat_created'] , true);
+        return var_export($this->message['channel_chat_created'], true);
     }
-
 
     public function MigrateToChatID()
     {
@@ -266,5 +254,4 @@ class Message extends Types
     {
         return $this->message['migrate_from_chat_id'];
     }
-
 }

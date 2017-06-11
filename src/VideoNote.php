@@ -4,7 +4,6 @@ namespace Shakibonline;
 
 class VideoNote
 {
-
     private $file_id;
     private $length;
     private $duration;
@@ -13,14 +12,15 @@ class VideoNote
 
     /**
      * User constructor.
+     *
      * @param array $video
      */
     public function __construct($video)
     {
-        $this->thumb     = $video['thumb'];
-        $this->file_id   = $video['file_id'];
-        $this->duration  = $video['duration'];
-        $this->length    = $video['length'];
+        $this->thumb = $video['thumb'];
+        $this->file_id = $video['file_id'];
+        $this->duration = $video['duration'];
+        $this->length = $video['length'];
         $this->file_size = $video['file_size'];
     }
 
@@ -28,7 +28,6 @@ class VideoNote
     {
         return $this->file_id;
     }
-
 
     public function Length()
     {
