@@ -27,6 +27,8 @@ echo $message->Chat()->Type() . PHP_EOL;
 
 Check The type
 ```php
+$type = MoonTelegram::Type($this->telegram->getData());
+
 if ( $type === MoonTelegram::MESSAGE ) {
 	$message = new Message($this->telegram->getData());
 	$chatInfo = $message->Chat();
