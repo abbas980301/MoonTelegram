@@ -199,4 +199,72 @@ class Message extends Types
         return new Contact($this->message['voice']);
     }
 
+
+    public function Location()
+    {
+        return new Location($this->message['location']);
+    }
+
+
+    public function Venue()
+    {
+        return new Venue($this->message['venue']);
+    }
+
+
+    public function NewChatMember()
+    {
+        return new User($this->message['new_chat_member']);
+    }
+
+
+    public function LeftChatMember()
+    {
+        return new User($this->message['left_chat_member']);
+    }
+
+    public function NewChatTitle()
+    {
+        return $this->message['new_chat_title'];
+    }
+
+    public function NewChatPhoto()
+    {
+        // todo wrong!
+        return new PhotoSize($this->message['new_chat_photo']);
+    }
+
+    public function DeleteChatPhoto()
+    {
+        return var_export($this->message['delete_chat_photo'] , true);
+    }
+
+    public function GroupChatCreated()
+    {
+        return var_export($this->message['group_chat_created'] , true);
+    }
+
+
+    public function SupergroupChatCreated()
+    {
+        return var_export($this->message['supergroup_chat_created'] , true);
+    }
+
+
+    public function ChannelChatCreated()
+    {
+        return var_export($this->message['channel_chat_created'] , true);
+    }
+
+
+    public function MigrateToChatID()
+    {
+        return $this->message['migrate_to_chat_id'];
+    }
+
+    public function MigrateFromChatID()
+    {
+        return $this->message['migrate_from_chat_id'];
+    }
+
 }
