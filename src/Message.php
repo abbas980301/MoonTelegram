@@ -62,7 +62,7 @@ class Message extends Types
      *
      * @param array $message
      */
-    protected function setMessage($message)
+    public function setMessage($message)
     {
         $this->message = $message;
     }

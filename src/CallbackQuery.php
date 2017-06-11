@@ -33,7 +33,7 @@ class CallbackQuery extends Types
         if (array_key_exists(self::CALLBACK_QUERY, $update)) {
             $type = 'callback_query';
         } else {
-            return;
+            return null;
         }
         $this->type = $type;
         $this->update = $update;
@@ -65,6 +65,14 @@ class CallbackQuery extends Types
     public function User()
     {
         return new User($this->message['from']);
+    }
+
+
+    public function Message()
+    {
+        $message = new Message($this->message['message']);
+        $message->setMessage($this->message['message']);
+        return $message;
     }
 
     public function InlineMessageID()
