@@ -18,6 +18,9 @@ Examples
 ```php
 require_once 'vendor/autoload.php';
 
+/**
+ * @var array $update
+ */
 $message = new \Shakibonline\Message($update);
 
 echo $message->Text() . PHP_EOL;
@@ -27,14 +30,17 @@ echo $message->Chat()->Type() . PHP_EOL;
 
 Check The type
 ```php
-$type = MoonTelegram::Type($this->telegram->getData());
+/**
+ * @var array $update
+ */
+$type = MoonTelegram::Type($update);
 
 if ( $type === MoonTelegram::MESSAGE ) {
-	$message = new Message($this->telegram->getData());
-	$chatInfo = $message->Chat();
+	$message = new Message($update);
+	$chat = $message->Chat();
 } elseif ( $type === MoonTelegram::CALLBACK_QUERY ) {
-	$callback = new CallbackQuery($this->telegram->getData());
-	$chatInfo = $callback->Message()->Chat();
+	$callback = new CallbackQuery($update);
+	$chat = $callback->Message()->Chat();
 }
 ```
 
