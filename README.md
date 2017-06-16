@@ -48,7 +48,7 @@ See [`Examples`](https://github.com/shakibonline/MoonTelegram/tree/master/Exampl
 
 Contact me
 ------------
-You can contact me [via Telegram](https://telegram.me/abbasShakiba) but if you have an issue please [open](https://github.com/shakibonline/MoonTelegram/issues) one.
+You can contact me [via Telegram](https://telegram.me/abbasShakiba) (EN and Fa) but if you have an issue please [open](https://github.com/shakibonline/MoonTelegram/issues) one.
 
 # Pull Request
 ------------
