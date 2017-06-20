@@ -2,6 +2,8 @@
 
 namespace Shakibonline;
 
+error_reporting(E_ALL);
+
 class Message extends Types
 {
     /**
@@ -211,7 +213,7 @@ class Message extends Types
 
     public function LeftChatMember()
     {
-        return new User($this->message['left_chat_member']);
+        return @new User($this->message['left_chat_member']);
     }
 
     public function NewChatTitle()
