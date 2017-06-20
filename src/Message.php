@@ -213,7 +213,7 @@ class Message extends Types
 
     public function LeftChatMember()
     {
-        return @new User($this->message['left_chat_member']);
+        return new User($this->message['left_chat_member']);
     }
 
     public function NewChatTitle()
