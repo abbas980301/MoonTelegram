@@ -2,7 +2,7 @@
 
 namespace Shakibonline;
 
-error_reporting(E_ALL);
+error_reporting(0);
 
 class Message extends Types
 {
