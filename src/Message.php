@@ -158,7 +158,7 @@ class Message extends Types
     public function Photo()
     {
         // Todo handle other photos
-        return new PhotoSize($this->message['photo'][0]);
+        return new PhotoSize($this->message['photo'][3]);
     }
 
     public function Sticker()
