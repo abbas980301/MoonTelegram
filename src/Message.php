@@ -157,7 +157,7 @@ class Message extends Types
 
     public function Photo()
     {
-        return new PhotoSize($this->message['photo']);
+        return new PhotoSize(end($this->message['photo']));
     }
 
     public function Sticker()
