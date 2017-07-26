@@ -155,9 +155,19 @@ class Message extends Types
         return new Document($this->message['audio']);
     }
 
-    public function Photo()
+    public function PhotoSmall()
     {
-        return new PhotoSize(end($this->message['photo']));
+        return $this->_photo(0);
+    }
+
+    public function PhotoMedium()
+    {
+        return $this->_photo(1);
+    }
+
+    public function PhotoLarge()
+    {
+        return $this->_photo(2);
     }
 
     public function Sticker()
@@ -254,5 +264,11 @@ class Message extends Types
     public function MigrateFromChatID()
     {
         return $this->message['migrate_from_chat_id'];
+    }
+
+    private function _photo($index)
+    {
+        $photo = json_decode($this->message['photo']);
+        return new PhotoSize($photo[$index]);
     }
 }
