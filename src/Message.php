@@ -160,6 +160,15 @@ class Message extends Types
         return $this->_photo(0);
     }
 
+    /**
+     * Return Photo index
+     * @return mixed
+     */
+    public function Photo()
+    {
+        return $this->message['photo'];
+    }
+
     public function PhotoMedium()
     {
         return $this->_photo(1);
@@ -268,7 +277,6 @@ class Message extends Types
 
     private function _photo($index)
     {
-        $photo = json_decode($this->message['photo']);
-        return new PhotoSize($photo[$index]);
+        return new PhotoSize($this->message['photo'][$index]);
     }
 }
