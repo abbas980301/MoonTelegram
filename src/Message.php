@@ -269,6 +269,7 @@ class Message extends Types
     private function _photo($index)
     {
         $photo = json_decode($this->message['photo']);
+
         return new PhotoSize($photo[$index]);
     }
 }
