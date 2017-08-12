@@ -161,7 +161,8 @@ class Message extends Types
     }
 
     /**
-     * Return Photo index
+     * Return Photo index.
+     *
      * @return mixed
      */
     public function Photo()
